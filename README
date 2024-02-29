@@ -2,7 +2,7 @@ Am creat un algoritm pe baza TRANSFORMARII TSEYTIN.
 LINK: https://en.wikipedia.org/wiki/Tseytin_transformation
 Din link-ul de mai sus sectiunea care m-a ajutat cel mai mult este "Simple combinatorial logic" dar si tabelul de la "Gate sub-expressions".
 
-## Implementarea temei
+Implementarea temei
 
 Am creat o structura Poarta ce contine int* intrari, o iesire de tip int si un char poarta in care o sa se retina prima litera a numelui portii.
 

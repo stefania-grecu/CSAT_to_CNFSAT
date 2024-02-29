@@ -1,0 +1,17 @@
+Am creat un algoritm pe baza TRANSFORMARII TSEYTIN.
+LINK: https://en.wikipedia.org/wiki/Tseytin_transformation
+Din link-ul de mai sus sectiunea care m-a ajutat cel mai mult este "Simple combinatorial logic" dar si tabelul de la "Gate sub-expressions".
+
+Implementarea temei
+
+Am creat o structura Poarta ce contine int* intrari, o iesire de tip int si un char poarta in care o sa se retina prima litera a numelui portii.
+
+In main am deschis fisierul de input primit ca argument, apoi fisierul de output primit ca argument, am citit din fisierul de input primele 2 valori, adica numarul de intrari, si valoarea de iesire. Am alocat dinamic spatiu pentru maxim 100 de porti (se preciza in cerinta ca sunt maxim 100 de porti), dupa care am scris pe prima linie in fisierul de output numarul de variabile (care este egal cu valoarea ultimei porti) si numarul de clauze care initial este 0 (o sa revin la final si o sa rescriu linia). Am inceput sa citesc din fisier prima litera de pe fiecare linie, apoi am terminat de citit cuvantul si am inceput sa citesc valorile, iar daca dupa o valoare urma '\n' inseamna ca aceasta este valoarea de iesire a portii si restul sunt valorile de intrare a portii respective. Dupa ce am citit o linie ma apuc sa scriu in fisierul de output astfel:
+-daca este o poarta "NOT": pe o linie valoarea de intrare si valoarea de iesire a portii negative urmate de un 0, iar pe urmatoarea linie valoarea de intrare si valoarea de iesire pozitive urmate de un 0; aici o sa fie mereu doua clauze.
+-daca este poarta "AND": valorile de intrare negative si valoarea de iesire pozitiva urmata de un 0 si in rest urmeaza clauze cu cate o valoare de intrare pozitiva si valoarea de iesire negatica; numarul de clauze este 1 + numarul de valori de intrare in poarta (sunt j - 1 pentru ca in while j se pluseaza de fiecare daca cand citeste o valoare adica si valoarea de iesire).
+-daca este poarta "OR": valorile de intrare pozitive, valoarea de iesire negativa si un 0, iar restul clauzelor sunt alcatutite din cate o valoare de intrare negativa si valoarea de iesire pozitiva; nr de clauze este la fel ca la poarta "AND".
+-la final mai este o clauza cu valoarea de iesire a ultimei porti; si mai marim nr de clauze cu 1.
+
+Ne ducem inapoi la inceputul fisierului si rescriem prima linie conform cerintei. Apoi eliberam memoria si inchidem fisierele.
+
+
